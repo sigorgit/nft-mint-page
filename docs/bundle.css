@@ -1,0 +1,319 @@
+/*
+https://github.com/Hanul/sky-css-base
+v0.0.1 | 20210109
+Author: Sim Young Jae
+License: MIT
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*,
+*:focus {
+  outline: 0;
+}
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+a,
+button,
+input[type=button],
+input[type=submit],
+input[type=reset] {
+  cursor: pointer;
+}
+button,
+input {
+  border: none;
+}
+[hidden] {
+  display: none !important;
+}
+[contenteditable] {
+  -webkit-tap-highlight-color: transparent;
+}
+.float-wrapper:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+:root {
+  --text-color: #000;
+  --bg-color: #F7DEA5;
+}
+@font-face {
+  font-family: 'ChosunGs';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGs.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: ChosunGs;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.home-view {
+  display: flex;
+  flex-direction: column;
+  max-width: 1240px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@media only screen and (max-width: 719px) {
+  .home-view {
+    margin: 8px;
+  }
+}
+.home-view > h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > h1 {
+    font-size: 3rem;
+  }
+}
+.home-view > h2 {
+  font-size: 1.5rem;
+  margin-top: 16px;
+  font-weight: bold;
+}
+.home-view > .comment-container {
+  position: relative;
+  justify-content: center;
+}
+.home-view > .comment-container > .comment {
+  width: 360px;
+  font-size: 0.75rem;
+  background-color: transparent;
+  position: absolute;
+  font-size: 1.25rem;
+  top: 15%;
+  left: 15%;
+  animation-duration: 5s;
+  animation-name: rainbowLink;
+  animation-iteration-count: infinite;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > .comment-container > .comment {
+    max-width: 230px;
+    top: 14%;
+  }
+}
+.home-view > .comment-container > img {
+  max-width: 512px;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > .comment-container > img {
+    max-width: 320px;
+  }
+}
+.home-view > input {
+  width: 100%;
+  height: 44px;
+  padding: 8px;
+  margin: 8px;
+}
+.home-view > input:focus {
+  box-shadow: 5px 10px;
+}
+.home-view > input:focus > .label {
+  display: block;
+}
+.home-view > button {
+  width: 100%;
+  height: 44px;
+  margin: 8px;
+  font-family: ChosunGs;
+  font-size: 16px;
+}
+.home-view > button:hover {
+  animation-duration: 5s;
+  animation-name: rainbowLink;
+  animation-iteration-count: infinite;
+  box-shadow: 5px 10px;
+}
+.home-view > button:active {
+  font-size: 1.25rem;
+}
+.home-view > .footer {
+  font-size: 0.875rem;
+}
+.home-view > .footer > .sns {
+  margin: 8px;
+}
+.home-view > .footer > .sns > a {
+  margin: 8px;
+}
+@keyframes rainbowLink {
+  0% {
+    color: red;
+  }
+  15% {
+    color: orange;
+  }
+  30% {
+    color: yellow;
+  }
+  45% {
+    color: green;
+  }
+  60% {
+    color: blue;
+  }
+  75% {
+    color: navy;
+  }
+  90% {
+    color: purple;
+  }
+  100% {
+    color: pink;
+  }
+}
+.popup-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 20px 0;
+}
+
