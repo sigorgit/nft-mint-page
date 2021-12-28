@@ -9,7 +9,7 @@ import TteokmillSparrowsWhitelistContract from "./TteokmillSparrowsWhitelistCont
 class TteokmillSparrowsMinterContract extends Contract {
 
     constructor() {
-        super("0x8716a98356E453a07Ded433A9f3df87bAc31ddE3", TteokmillSparrowsMinterArtifact.abi);
+        super("0x5fbED47210B9ACfB726736a62650C9F2356463a4", TteokmillSparrowsMinterArtifact.abi);
     }
 
     public async mintPrice(): Promise<BigNumber> {
