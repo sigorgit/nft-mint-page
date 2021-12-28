@@ -26,6 +26,7 @@ interface TteokmillSparrowsMinterInterface extends ethers.utils.Interface {
     "setLimit(uint256)": FunctionFragment;
     "withdrawIjm()": FunctionFragment;
     "nft()": FunctionFragment;
+    "mintCounts(address)": FunctionFragment;
     "mintPrice()": FunctionFragment;
     "renounceOwnership()": FunctionFragment;
     "owner()": FunctionFragment;
@@ -47,6 +48,7 @@ interface TteokmillSparrowsMinterInterface extends ethers.utils.Interface {
     values?: undefined
   ): string;
   encodeFunctionData(functionFragment: "nft", values?: undefined): string;
+  encodeFunctionData(functionFragment: "mintCounts", values: [string]): string;
   encodeFunctionData(functionFragment: "mintPrice", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "renounceOwnership",
@@ -73,6 +75,7 @@ interface TteokmillSparrowsMinterInterface extends ethers.utils.Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "nft", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "mintCounts", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "mintPrice", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "renounceOwnership",
@@ -134,6 +137,13 @@ export class TteokmillSparrowsMinter extends Contract {
     nft(overrides?: CallOverrides): Promise<[string]>;
 
     "nft()"(overrides?: CallOverrides): Promise<[string]>;
+
+    mintCounts(arg0: string, overrides?: CallOverrides): Promise<[BigNumber]>;
+
+    "mintCounts(address)"(
+      arg0: string,
+      overrides?: CallOverrides
+    ): Promise<[BigNumber]>;
 
     mintPrice(overrides?: CallOverrides): Promise<[BigNumber]>;
 
@@ -209,6 +219,13 @@ export class TteokmillSparrowsMinter extends Contract {
 
   "nft()"(overrides?: CallOverrides): Promise<string>;
 
+  mintCounts(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
+
+  "mintCounts(address)"(
+    arg0: string,
+    overrides?: CallOverrides
+  ): Promise<BigNumber>;
+
   mintPrice(overrides?: CallOverrides): Promise<BigNumber>;
 
   "mintPrice()"(overrides?: CallOverrides): Promise<BigNumber>;
@@ -279,6 +296,13 @@ export class TteokmillSparrowsMinter extends Contract {
     nft(overrides?: CallOverrides): Promise<string>;
 
     "nft()"(overrides?: CallOverrides): Promise<string>;
+
+    mintCounts(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
+
+    "mintCounts(address)"(
+      arg0: string,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
 
     mintPrice(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -356,6 +380,13 @@ export class TteokmillSparrowsMinter extends Contract {
 
     "nft()"(overrides?: CallOverrides): Promise<BigNumber>;
 
+    mintCounts(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
+
+    "mintCounts(address)"(
+      arg0: string,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
     mintPrice(overrides?: CallOverrides): Promise<BigNumber>;
 
     "mintPrice()"(overrides?: CallOverrides): Promise<BigNumber>;
@@ -427,6 +458,16 @@ export class TteokmillSparrowsMinter extends Contract {
     nft(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     "nft()"(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    mintCounts(
+      arg0: string,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    "mintCounts(address)"(
+      arg0: string,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
 
     mintPrice(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 

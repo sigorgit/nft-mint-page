@@ -3,6 +3,7 @@ import Contract from "./Contract";
 declare class TteokmillSparrowsMinterContract extends Contract {
     constructor();
     mintPrice(): Promise<BigNumber>;
+    mintCounts(address: string): Promise<BigNumber>;
     limit(): Promise<BigNumber>;
     mint(ment: string): Promise<void>;
 }

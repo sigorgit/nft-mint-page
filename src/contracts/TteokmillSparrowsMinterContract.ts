@@ -16,6 +16,10 @@ class TteokmillSparrowsMinterContract extends Contract {
         return BigNumber.from(await this.runMethod("mintPrice"));
     }
 
+    public async mintCounts(address: string): Promise<BigNumber> {
+        return BigNumber.from(await this.runMethod("mintCounts", address));
+    }
+
     public async limit(): Promise<BigNumber> {
         return BigNumber.from(await this.runMethod("limit"));
     }
@@ -31,6 +35,8 @@ class TteokmillSparrowsMinterContract extends Contract {
             if (owner !== undefined) {
                 if (await TteokmillSparrowsWhitelistContract.whitelist(owner) !== true) {
                     alert("화이트리스트에 너의 주소가 없당");
+                } else if ((await this.mintCounts(owner)).eq(10)) {
+                    alert("10개 민팅했잖아 욕심쟁이!!");
                 } else {
                     const price = await this.mintPrice();
                     const balance = await InjeolmiContract.balanceOf(owner);
