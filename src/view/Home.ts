@@ -19,7 +19,7 @@ export default class Home implements View {
                 el("img", { src: `./images/nft${Math.floor(Math.random() * 6)}.png` }),
                 this.commentInput = el("input.comment", { placeholder: "원하는 문구를 입력해줘" }),
             ),
-            el(".text-container", el(".progress-text", "내 집 마련한 참새 수"), this.progressText = el(".progress-text", "2,000참새/10,000참새")),
+            el(".text-container", el(".progress-text", "내 집 마련한 참새 수"), this.progressText = el(".progress-text", "0참새/10,000참새")),
             el(".progress", this.bar = el(".progress__bar")),
             el("button", "민팅 허기", {}),
             el(".footer", el(".sns",
