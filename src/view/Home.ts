@@ -26,6 +26,7 @@ export default class Home implements View {
             el("h1", "떡방앗간 참새 NFT 민팅"),
             el("h2", "참새들의 내 집 마련의 꿈은 이뤄진다...☆"),
             el("h3", "똥영재 曰: 절. 대. 컴. 터. 로. 해."),
+            el("h3", "🚨지금 나오는 참새는 미리보기로 민팅하면 다른 참새로 느프트 나옴🚨"),
             el(".comment-container",
                 el("img", { src: `./images/nft${Math.floor(Math.random() * 6)}.png` }),
                 this.commentInput = el("input.comment", { placeholder: "원하는 문구를 입력해줘" }),
