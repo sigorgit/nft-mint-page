@@ -252,6 +252,31 @@ body {
 .home-view > input:focus > .label {
   display: block;
 }
+.home-view > .text-container {
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.home-view > .text-container > .progress-text {
+  margin-top: 16px;
+  color: black;
+}
+.home-view > .progress {
+  margin: 8px;
+  padding: 2px;
+  width: 100%;
+  max-width: 1240px;
+  border: 2px solid black;
+  border-radius: 16px;
+  height: 32px;
+}
+.home-view > .progress > .progress__bar {
+  height: 100%;
+  width: 20%;
+  background: linear-gradient(124deg, red, orange, yellow, green, blue, navy, purple, pink);
+  border-radius: 16px;
+}
 .home-view > button {
   width: 100%;
   height: 44px;
