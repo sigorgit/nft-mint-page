@@ -224,6 +224,7 @@ body {
 .home-view > .comment-container > .comment {
   width: 360px;
   font-size: 0.75rem;
+  text-align: center;
   background-color: transparent;
   position: absolute;
   font-size: 1.25rem;
