@@ -26,21 +26,26 @@ export default class Home implements View {
             el("h1", "떡방앗간 참새 NFT 민팅"),
             el("h2", "참새들의 내 집 마련의 꿈은 이뤄진다...☆"),
             el("h3", "똥영재 曰: 절. 대. 컴. 터. 로. 해."),
-            this.mintPrice = el(".mint-price", "민팅 절미:"),
-            this.ijmBalance = el(".ijm-balance", "너의 절미:"),
-            el(".wallet-address-container",
-                el("h3", "너의 주소"),
-                this.walletAddress = el(".wallet-address"),
-            ),
             el(".comment-container",
                 el("img", { src: `./images/nft${Math.floor(Math.random() * 6)}.png` }),
                 this.commentInput = el("input.comment", { placeholder: "원하는 문구를 입력해줘" }),
+            ),
+            el(".info-container",
+                this.mintPrice = el(".mint-price", "민팅 절미:"),
+                this.ijmBalance = el(".ijm-balance", "너의 절미:"),
+                el("wallet-container", el("span", "너의 주소: "),
+                    this.walletAddress = el("span.wallet-address")),
             ),
             el(".text-container", el(".progress-text", "내 집 마련한 참새 수"), this.mintCount = el(".progress-text")),
             el(".progress", this.bar = el(".progress__bar")),
             el("button", "민팅 허기", {
                 click: () => {
                     TteokmillSparrowsMinterContract.mint(this.commentInput.domElement.value);
+                },
+            }),
+            el("button.fail", "민팅 못 했어...?", {
+                click: () => {
+                    window.open("https://klu.bs/pfp/0x29d05593116C443da54DaBFB4e5322DEA2fff8Cd")
                 },
             }),
             el(".footer", el(".sns",
