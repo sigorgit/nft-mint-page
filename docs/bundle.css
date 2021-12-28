@@ -210,6 +210,13 @@ body {
   margin-top: 16px;
   font-weight: bold;
 }
+.home-view > h3 {
+  font-size: 1.25rem;
+  margin-top: 16px;
+  font-weight: bold;
+  color: red;
+  text-decoration: underline;
+}
 .home-view > .comment-container {
   position: relative;
   justify-content: center;
